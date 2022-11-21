@@ -86,12 +86,12 @@ RunStat(
 	   GroupString(statbuf.st_gid), (int)statbuf.st_gid);
 
     printf("Phys: inode %lld, %u link, %lld blocks\n",
-	   statbuf.st_ino,
-	   statbuf.st_nlink,
-	   statbuf.st_blocks);
+	   (long long) statbuf.st_ino,
+	   (unsigned) statbuf.st_nlink,
+	   (long long) statbuf.st_blocks);
 
     printf("Size: %lld bytes, I/O block size %d\n",
-	   statbuf.st_size,
+	   (long long) statbuf.st_size,
 	   statbuf.st_blksize);
 	   
     printf("Access: %s\n", TimeString(statbuf.st_atime));
