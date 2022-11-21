@@ -5,9 +5,6 @@ CXXLAGS=${CFLAGS}
 
 SOURCES = ${wildcard *.c *.cc}
 
-foo:
-	echo ${SOURCES}
-
 default: find
 
 find: ${SOURCES}
