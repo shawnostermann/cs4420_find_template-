@@ -1,7 +1,7 @@
 CC=gcc
 CXX=g++
 CFLAGS=-Wall -Werror -O2
-CXXLAGS=${CFLAGS}
+CXXFLAGS=${CFLAGS}
 
 SOURCES = ${wildcard *.c *.cc}
 
