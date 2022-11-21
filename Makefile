@@ -7,13 +7,16 @@ SOURCES = ${wildcard *.c *.cc}
 
 foo:
 	echo ${SOURCES}
-	
+
 default: find
 
 find: ${SOURCES}
 
+testdir: testdir.tar.gz
+	tar -xf testdir.tar.gz
+
 .PHONY: test
-test: find
+test: find testdir
 	tar -xf testdir.tar.gz
 	-./test.e1
 	-./test.e2
