@@ -13,7 +13,7 @@ default: find
 find: ${SOURCES}
 
 testdir: testdir.tar.gz
-	tar -xf testdir.tar.gz
+	-tar -xf testdir.tar.gz 2>/dev/null
 
 .PHONY: test
 test: find testdir
