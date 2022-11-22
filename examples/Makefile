@@ -1,4 +1,11 @@
 CC=gcc
+GCC=g++
 CFLAGS=-Wall -Werror -O3
+CXXFLAGS=${CFLAGS}
 
-default: readdir sstat
+PROGS=readdir sstat readdircc
+
+default: ${PROGS}
+
+clean:
+	rm -f ${PROGS}
